@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 import { createMuiTheme } from "@material-ui/core/styles";
 import { StylesProvider } from "@material-ui/styles";
@@ -15,9 +15,9 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <StylesProvider injectFirst>
         <SnackbarProvider>
-          <BrowserRouter>
+          <HashRouter>
             {renderRoutes(routes)}
-          </BrowserRouter>
+          </HashRouter>
         </SnackbarProvider>
       </StylesProvider>
     </ThemeProvider>
