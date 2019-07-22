@@ -40,6 +40,7 @@
     "@types/rebass": "^3.0.4",
     "@types/styled-components": "^4.1.18",
     "@types/styled-system": "^5.0.0",
+    "gh-pages": "^2.0.1",
     "patch-package": "^6.1.2",
     "typescript": "^3.5.3"
   },
@@ -52,6 +53,8 @@
     "eject": "react-scripts eject",
     "postinstall": "patch-package",
     "start": "react-scripts start",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
