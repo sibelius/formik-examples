@@ -1,0 +1,24 @@
+diff --git a/node_modules/react-scripts/config/webpack.config.js b/node_modules/react-scripts/config/webpack.config.js
+index 8f70442..dfd86d8 100644
+--- a/node_modules/react-scripts/config/webpack.config.js
++++ b/node_modules/react-scripts/config/webpack.config.js
+@@ -47,6 +47,10 @@ const shouldInlineRuntimeChunk = process.env.INLINE_RUNTIME_CHUNK !== 'false';
+ // Check if TypeScript is setup
+ const useTypeScript = fs.existsSync(paths.appTsConfig);
+ 
++// Skip TypeScript type checking
++const typeCheckTypeScript =
++  useTypeScript && !(process.env.SKIP_TYPE_CHECK === 'true');
++
+ // style files regexes
+ const cssRegex = /\.css$/;
+ const cssModuleRegex = /\.module\.css$/;
+@@ -629,7 +633,7 @@ module.exports = function(webpackEnv) {
+           ],
+         }),
+       // TypeScript type checking
+-      useTypeScript &&
++      typeCheckTypeScript &&
+         new ForkTsCheckerWebpackPlugin({
+           typescript: resolve.sync('typescript', {
+             basedir: paths.appNodeModules,

@@ -1,27 +1,6 @@
 {
   "name": "forms-examples",
   "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@material-ui/core": "^4.2.1",
-    "@material-ui/icons": "^4.2.1",
-    "@material-ui/styles": "^4.2.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
-    "rebass": "^3.1.1",
-    "styled-components": "^4.3.2",
-    "styled-system": "^5.0.15"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -34,11 +13,45 @@
       "last 1 safari version"
     ]
   },
+  "dependencies": {
+    "@material-ui/core": "^4.2.1",
+    "@material-ui/icons": "^4.2.1",
+    "@material-ui/styles": "^4.2.1",
+    "@types/yup": "^0.26.22",
+    "formik": "v2.0.1-rc.12",
+    "notistack": "^0.8.8",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-config": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "rebass": "^3.1.1",
+    "styled-components": "^4.3.2",
+    "styled-system": "^5.0.15",
+    "yup": "^0.27.0"
+  },
   "devDependencies": {
     "@types/jest": "^24.0.15",
     "@types/node": "^12.6.8",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
+    "@types/react-router-config": "^5.0.0",
+    "@types/react-router-dom": "^4.3.4",
+    "@types/rebass": "^3.0.4",
+    "@types/styled-components": "^4.1.18",
+    "@types/styled-system": "^5.0.0",
+    "patch-package": "^6.1.2",
     "typescript": "^3.5.3"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "private": true,
+  "scripts": {
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "postinstall": "patch-package",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
   }
 }
